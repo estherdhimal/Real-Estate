@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      padding-top: 40px; 
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 40px;
+      width: 100%;
+      min-width: 40em;
+      background-color: #98afd1;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    
+    #thank-you {
+      display: none; 
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+
+   
+    #thank-you:target {
+      display: block; 
+    }
+
+    
+    #contact-form-container {
+      margin-top: 20px;
+    }
+
+    #contact-form {
+      display: block;
+    }
+
+    
+    #thank-you-link {
+      display: none; 
+    }
+
+    
+    #contact-form:target + #thank-you-link {
+      display: block; 
+  </style>
+  <title>Contact Us</title>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="property1.html">Property Listings</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="contact-form-container">
+      <h2>Fill in Your Preferences</h2>
+      <form action="#thank-you" id="contact-form">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+
+        <label for="contact-number">Contact Number:</label>
+        <input type="tel" id="contact-number" name="contact-number" required>
+
+        <label for="house-type">House Type:</label>
+        <input type="text" id="house-type" name="house-type" required>
+
+        <label for="number-of-rooms">Number of Rooms:</label>
+        <input type="number" id="number-of-rooms" name="number-of-rooms" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+   
+    <a href="#thank-you" id="thank-you-link">Thank you for submitting! We will contact you soon.</a>
+   
+    <div id="thank-you">Thank you for submitting! We will contact you soon.</div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Angel Real Estate. All rights reserved.</p>
+  </footer>
+</body>
+</html>
